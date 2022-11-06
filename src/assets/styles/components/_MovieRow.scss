@@ -1,6 +1,9 @@
 .movie-row {
+    margin-bottom: 20px;
 
-    h2 {}
+    h2 {
+        margin-inline-start: 20px;
+    }
 
     .row-posters {
         display: flex;
@@ -21,6 +24,16 @@
 
             &:hover {
                 transform: scale(1.08);
+            }
+        }
+    }
+
+    .large-row {
+        img {
+            max-height: 250px;
+
+            &:hover {
+                transform: scale(1.09);
             }
         }
     }
