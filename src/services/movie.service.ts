@@ -2,7 +2,7 @@ import Axios from 'axios'
 
 const baseURL = 'https://api.themoviedb.org/3'
 const axios = Axios.create({
-   baseURL
+   baseURL,
 })
 
 export const movieService = {
