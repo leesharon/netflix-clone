@@ -20,7 +20,7 @@ function App() {
 
    const movieRowsData = [
       { id: utilService.makeId(), title: 'NETFLIX ORIGINALS', fetchUrl: requestUrls.fetchNetflixOriginals },
-      { id: utilService.makeId(), title: 'Treding Now', fetchUrl: requestUrls.fetchTrending },
+      { id: utilService.makeId(), title: 'Trending Now', fetchUrl: requestUrls.fetchTrending },
       { id: utilService.makeId(), title: 'Top Rated', fetchUrl: requestUrls.fetchTopRated },
       { id: utilService.makeId(), title: 'Action Movies', fetchUrl: requestUrls.fetchActionMovies },
       { id: utilService.makeId(), title: 'Comedy Movies', fetchUrl: requestUrls.fetchComedyMovies },
