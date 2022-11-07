@@ -3,7 +3,7 @@ export interface Movie {
     backdrop_path: string
     id: string
     overview: string
-    name?: string
+    name: string
     original_name?: string
     title?: string
 }

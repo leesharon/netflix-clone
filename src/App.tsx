@@ -2,6 +2,7 @@ import './assets/styles/main.scss'
 import { MovieRow } from 'components/MovieRow'
 import { utilService } from 'services/util.service'
 import { Banner } from 'components/Banner'
+import { AppHeader } from 'components/AppHeader'
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
 
    return (
       <div className="app">
-         {/* nav */}
+         <AppHeader />
          <Banner fetchUrl={requestUrls.fetchNetflixOriginals} />
          {movieRowsData.map((row, idx) => (
             <MovieRow

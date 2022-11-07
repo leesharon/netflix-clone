@@ -1,6 +1,9 @@
 import { Movie } from 'models/movie.model'
 import React, { useEffect, useState } from 'react'
+import YouTube from 'react-youtube'
 import { movieService } from 'services/movie.service'
+// import movieTrailer from 'movie-trailer'
+const movieTrailer = require('movie-trailer')
 
 interface Props {
     title: string
@@ -11,16 +14,41 @@ interface Props {
 export const MovieRow: React.FC<Props> = ({ title, fetchUrl, isLargeRow }) => {
 
     const [movies, setMovies] = useState<Movie[]>([])
+    const [videoId, setVideoId] = useState<string>('')
 
     useEffect(() => {
         (async () => {
             const movies = await movieService.query(fetchUrl)
+            console.log('movies', movies)
             setMovies(movies)
         })()
     }, [fetchUrl])
 
+    const onPosterClick = async (movieName: string | undefined) => {
+        console.log('onPosterClick ~ movieName', movieName)
+        if (videoId) return setVideoId('')
+        try {
+            const url = await movieTrailer(movieName || '')
+            console.log('onPosterClick ~ url', url)
+            const urlSearchParams = new URLSearchParams(new URL(url).search)
+            const videoId = urlSearchParams.get('v')
+            videoId && setVideoId(videoId)
+        } catch (err) {
+            console.log('Cannot get trailer:', err)
+        }
+    }
+
     const basePosterUrl = "https://image.tmdb.org/t/p/original"
 
+    const opts = {
+        height: '390',
+        width: '100%',
+        playerVars: {
+            autoplay: 1
+        }
+    }
+
+    if (!movies) return <h1>Loading...</h1>
     return (
         <section className="movie-row main-layout">
             <h2>{title}</h2>
@@ -30,10 +58,11 @@ export const MovieRow: React.FC<Props> = ({ title, fetchUrl, isLargeRow }) => {
                         src={`${basePosterUrl}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
                         alt={movie.name}
                         key={movie.id}
+                        onClick={() => { onPosterClick(movie.name || movie.original_name || movie.title) }}
                     />
                 ))}
             </div>
-
+            {videoId && <YouTube videoId={videoId} opts={opts} />}
         </section >
     )
 }
