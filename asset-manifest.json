@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/%3Cnetflix-clone%3E/static/css/main.f0836cb4.css",
-    "main.js": "/%3Cnetflix-clone%3E/static/js/main.5f6db105.js",
-    "static/media/Dosis-Medium.ttf": "/%3Cnetflix-clone%3E/static/media/Dosis-Medium.f8d877a1b41eafb64fe7.ttf",
-    "static/media/Dosis-Bold.ttf": "/%3Cnetflix-clone%3E/static/media/Dosis-Bold.1231ff1f0aac5aad68c3.ttf",
-    "index.html": "/%3Cnetflix-clone%3E/index.html",
-    "main.f0836cb4.css.map": "/%3Cnetflix-clone%3E/static/css/main.f0836cb4.css.map",
-    "main.5f6db105.js.map": "/%3Cnetflix-clone%3E/static/js/main.5f6db105.js.map"
+    "main.css": "/netflix-clone/static/css/main.dd7cc225.css",
+    "main.js": "/netflix-clone/static/js/main.dd70d55b.js",
+    "static/media/Dosis-Medium.ttf": "/netflix-clone/static/media/Dosis-Medium.f8d877a1b41eafb64fe7.ttf",
+    "static/media/Dosis-Bold.ttf": "/netflix-clone/static/media/Dosis-Bold.1231ff1f0aac5aad68c3.ttf",
+    "index.html": "/netflix-clone/index.html",
+    "main.dd7cc225.css.map": "/netflix-clone/static/css/main.dd7cc225.css.map",
+    "main.dd70d55b.js.map": "/netflix-clone/static/js/main.dd70d55b.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0836cb4.css",
-    "static/js/main.5f6db105.js"
+    "static/css/main.dd7cc225.css",
+    "static/js/main.dd70d55b.js"
   ]
 }
