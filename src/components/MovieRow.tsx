@@ -19,17 +19,14 @@ export const MovieRow: React.FC<Props> = ({ title, fetchUrl, isLargeRow }) => {
     useEffect(() => {
         (async () => {
             const movies = await movieService.query(fetchUrl)
-            console.log('movies', movies)
             setMovies(movies)
         })()
     }, [fetchUrl])
 
     const onPosterClick = async (movieName: string | undefined) => {
-        console.log('onPosterClick ~ movieName', movieName)
         if (videoId) return setVideoId('')
         try {
             const url = await movieTrailer(movieName || '')
-            console.log('onPosterClick ~ url', url)
             const urlSearchParams = new URLSearchParams(new URL(url).search)
             const videoId = urlSearchParams.get('v')
             videoId && setVideoId(videoId)

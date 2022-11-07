@@ -17,7 +17,6 @@ export const Banner: React.FC<Props> = ({ fetchUrl }) => {
             const movieIdx = utilService.getRandomIntInclusive(0, movies.length - 1)
             const movie = movies[movieIdx]
             setMovie(movie)
-            console.log('movie', movie)
         })()
     }, [])
 
