@@ -4,6 +4,7 @@ const BASE_URL = 'https://api.themoviedb.org/3'
 
 var axios = Axios.create({})
 
+
 export const httpService = {
    get(endpoint: string, data?: {} | null | undefined) {
       return ajax(endpoint, 'GET', data)

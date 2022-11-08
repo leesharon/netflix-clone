@@ -1,5 +1,4 @@
 import { httpService } from './http.service';
-import Axios from 'axios'
 
 export const movieService = {
    query

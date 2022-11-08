@@ -8,14 +8,14 @@ function App() {
 
    const API_KEY = '35dacddec306ef7f690bedd2e0a73b54'
    const requestUrls = {
-      fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
-      fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
-      fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
-      fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
-      fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
-      fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
-      fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
-      fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+      fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US&cors=true`,
+      fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213&cors=true`,
+      fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US&cors=true`,
+      fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28&cors=true`,
+      fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35&cors=true`,
+      fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27&cors=true`,
+      fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749&cors=true`,
+      fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99&cors=true`,
    }
 
    const movieRowsData = [
